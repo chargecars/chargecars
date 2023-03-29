@@ -1,0 +1,1 @@
+from . import purchase_general_terms_and_condition

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_purchase_charge" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.purchase.charge</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='purchase_setting_container']" position="inside">
+                <div class="col-12 col-lg-6 o_setting_box" id="general_terms_settings">
+                    <div class="o_setting_left_pane">
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <strong>General Terms and Condition</strong>
+                        <div class="text-muted">
+                            This text applied to this field should appear on the PO template on a new page
+                        </div>
+                        <button name="open_general_term_condition" icon="fa-arrow-right"
+                                type="object" string="Update General Terms And condition"
+                                 class="btn-link"/>
+                        <br groups="base.group_no_one"/>
+
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

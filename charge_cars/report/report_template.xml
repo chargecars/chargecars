@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="external_layout_boxed_charge" inherit_id="web.external_layout_boxed">
+        <xpath expr="//div[@t-field='company.report_footer']" position="replace">
+         </xpath>
+    </template>
+</odoo>
