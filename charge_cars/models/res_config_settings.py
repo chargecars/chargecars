@@ -7,7 +7,7 @@ from odoo import api, fields, models, _
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
-    purchase_general_terms_condition = fields.Html(related='company_id.purchase_general_terms_condition',
+    purchase_general_terms_condition = fields.Html(related='company_id.purchase_general_terms_condition', store=True,
                                                    string='Terms and Conditions')
 
     def open_general_term_condition(self):
