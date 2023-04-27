@@ -24,7 +24,6 @@
             <th name="th_product_code">
                 <strong>Product Code</strong>
             </th>
-
         </xpath>
         <xpath expr="//td[@id='product']" position="before">
             <td id="product_code">
@@ -34,7 +33,11 @@
                 <span t-esc="line.product_id.variant_seller_ids.filtered(lambda l: l.partner_id== line.order_id.partner_id).product_code"/>
                 </t>
             </td>
-
+        </xpath>
+        <xpath expr="//td[@id='product']" position="replace">
+            <td id="product">
+                <span t-field="line.x_studio_description"/>
+            </td>
         </xpath>
         <xpath expr="//p[@t-field='o.notes']" position="after">
             <p style="page-break-after: always;"></p>
